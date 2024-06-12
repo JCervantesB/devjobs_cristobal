@@ -7,7 +7,7 @@
 
             <div class="bg-white shadow-sm rounded-lg p-6 divide-y divide-gray-200">
                 @forelse ($vacantes as $vacante )
-                    <div class="md:flex md:justify-between md:items-center py-5" >
+                    <div wire:key='{{$vacante->id}}' class="md:flex md:justify-between md:items-center py-5" >
                         <div class="md:flex-1">
                             <a class="text-3xl font-extrabold text-gray-600 " {{route ('vacantes.show', $vacante->id)}}>
                                 {{$vacante->titulo}}
